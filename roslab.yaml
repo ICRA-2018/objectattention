@@ -1,0 +1,24 @@
+name: objectattention
+
+base:
+  ubuntu: 16.04
+  ros: kinetic-ros-base
+  cuda: 8.0-devel
+  cudnn: 5-devel
+  opengl: runtime
+
+apt:
+  - python-setuptools
+  - python-dev
+  - python-tk
+
+pip:
+  - numpy==1.11.0
+  - matplotlib==2.0.0
+  - easydict
+  - Cython==0.26
+  - pyyaml
+  - tensorflow-gpu==1.2
+  - opencv-python
+  - pillow
+
