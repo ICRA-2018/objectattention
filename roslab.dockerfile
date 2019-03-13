@@ -157,6 +157,8 @@ RUN apt-get -o Acquire::ForceIPv4=true update \
 
 ##################################### PIP ######################################
 
+RUN pip install --upgrade pip
+
 RUN pip install  \
     numpy==1.11.0 \
     matplotlib==2.0.0 \
@@ -172,6 +174,11 @@ RUN pip install  \
 RUN mkdir ${HOME}/objectattention
 
 COPY . ${HOME}/objectattention
+
+################################### CUSTOM #####################################
+
+RUN cd $HOME/objectattention/rpn_net/util/faster_rcnn_lib \
+ && make
 
 ##################################### TAIL #####################################
 

@@ -22,3 +22,6 @@ pip:
   - opencv-python
   - pillow
 
+custom:
+  - cd $HOME/objectattention/rpn_net/util/faster_rcnn_lib
+  - make
