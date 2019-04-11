@@ -22,6 +22,7 @@ pip:
   - tensorflow-gpu==1.2
   - opencv-python
   - pillow
+  - ipython
 
 custom:
   - cd $HOME/objectattention/rpn_net/util/faster_rcnn_lib

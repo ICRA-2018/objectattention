@@ -169,7 +169,8 @@ RUN pip2 install  \
     pyyaml \
     tensorflow-gpu==1.2 \
     opencv-python \
-    pillow
+    pillow \
+    ipython
 
 ##################################### COPY #####################################
 
