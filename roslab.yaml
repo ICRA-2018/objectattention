@@ -5,7 +5,6 @@ base:
   ros: kinetic-ros-base
   cuda: 8.0-devel
   cudnn: 5-devel
-  opengl: runtime
 
 apt:
   - python-setuptools
