@@ -1,4 +1,6 @@
 # objectattention
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/icra2018/objectattention.svg)](https://hub.docker.com/r/icra2018/objectattention)
+<a href="#how-to-run-with-docker"><img src="https://img.shields.io/badge/Docker-instructions-brightgreen.svg"></a>
 
 Attending to objects for robot learning.
 
@@ -56,3 +58,17 @@ python bbox_node.py taskdata/pouring/myexperiment/attention_queries.npy
 Acknowledgements:
 We thank Ronghang Hu for porting RPN from https://github.com/rbgirshick/py-faster-rcnn to tensorflow.
 This work was done with the support of Huawei Technologies and the National Science Foundation.
+
+# How to Run with Docker
+## Linux
+#### Prerequisites
+* NVIDIA GPU with CUDA support
+* [nvidia-docker 2.0](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0))
+
+Tested on Ubuntu 16.04.6 with Docker 18.06.1-ce, GPU GeForce 940M, NVIDIA Driver version 410.48.
+
+1. Open a terminal and run the command:
+```
+nvidia-docker run --rm -p 8888:8888 icra2018/objectattention:latest
+```
+2. Run a web browser and open the link: [http://localhost:8888/lab/tree/README.ipynb](http://localhost:8888/lab/tree/README.ipynb)
