@@ -170,7 +170,9 @@ RUN pip2 install  \
     tensorflow-gpu==1.2 \
     opencv-python \
     pillow \
-    ipython
+    ipython==5.8.0 \
+    ipykernel==4.10.0 \
+    tornado==5.1.1
 
 ##################################### COPY #####################################
 
@@ -180,7 +182,8 @@ COPY . ${HOME}/objectattention
 
 ################################### CUSTOM #####################################
 
-RUN cd $HOME/objectattention/rpn_net/util/faster_rcnn_lib \
+RUN python2 -m ipykernel install \
+ && cd $HOME/objectattention/rpn_net/util/faster_rcnn_lib \
  && make
 
 ##################################### TAIL #####################################
