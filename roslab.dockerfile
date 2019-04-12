@@ -178,7 +178,7 @@ RUN pip2 install  \
 
 RUN mkdir ${HOME}/objectattention
 
-COPY . ${HOME}/objectattention
+COPY --chown=1000:1000 . ${HOME}/objectattention
 
 ################################### CUSTOM #####################################
 
@@ -187,8 +187,6 @@ RUN python2 -m ipykernel install \
  && make
 
 ##################################### TAIL #####################################
-
-RUN chown -R ${NB_UID} ${HOME}
 
 USER ${NB_USER}
 
